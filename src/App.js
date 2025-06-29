@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Adsense from './components/Adsense'; // ✅ AdSense script injector
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-teal-900 to-black animate-cyber-glitch">
+      <Adsense /> {/* ✅ Inject Google AdSense script once */}
       <Navbar setActiveSection={setActiveSection} />
       <main className="flex-grow">
         {renderSection()}
